@@ -1,0 +1,17 @@
+<li><a href="#tabs-9" value="buah-buahan">Buah-Buahan</a></li>
+                    <li><a href="#tabs-9" value="sayur-sayuran">Sayur-sayuran</a></li>
+                    <li><a href="#tabs-9" value="umbi-umbian">Umbi-umbian</a></li>
+                    <li><a href="#tabs-9" value="biji-bijian">Biji-bijian</a></li>
+                    
+        $products = Product::latest()->paginate(5);
+        return view('beranda.index',compact('products'))
+            ->with('i', (request()->input('page', 1) - 1) * 5);
+            if(!$request){
+                $products = Product::latest()->paginate(5);
+                }
+            else if($request->kategori == "semua"){
+                    $products=Product::get();
+                }else{
+                    $products=Product::where('kategori',$request->kategori)->get(); 
+                }//  dd($newServices);
+                return view('awal',compact('products') );

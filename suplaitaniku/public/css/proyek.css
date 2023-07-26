@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800');
+
+@keyframes transitionIn {
+    from{
+        opacity: 0;
+        transform: rotateX(-5deg);
+    }
+
+    to{
+        opacity: 1;
+        transform: rotateX(0);
+    }
+}
+
+* {
+    font-family: Montserrat;
+}
+
+body{
+    background-color: #E1F6EC;
+    animation: transitionIn 0.85s;
+}
+
+/* Untuk Header */
+.brand-name{
+    font-weight: 700;
+    font-size: 25px;
+}
+
+.web-logo .web-logo-image{
+    background-image: url(assets/images/web-logo.png)
+}
+
+.navbar .container {
+    align-items: center;
+}
+
+.navbar-brand{
+    transition: transform .2s;
+}
+
+.navbar-brand:hover {
+    transform: scale(1.1);
+}
+
+nav ul{
+    padding: 10px;
+    text-align: center;
+    align-items: center;
+}
+
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 0 10px;
+    margin-top: 10px;
+}
+
+nav ul li a{
+    color: #000000;
+    font-size: 14px;
+    font-weight: 600;
+    transition: color .15s;
+}
+
+nav ul li a:hover{
+    color: #00000049;
+    text-decoration: none;
+}
+
+.dropdown-item{
+    transition: background-color .2s;
+}
+
+.dropdown-item:hover{
+    background-color: #A0FFE6;
+}
+
+.dropdown-item:active{
+    color: black;
+    background-color: #6dad9c;
+}
+
+/*untuk footer*/
+.footer{
+    margin-bottom: 0;
+}
+
+.footer .container .row{
+    padding: 40px 0;
+}
+
+.footer-right{
+    text-align: right;
+}
+
+.social-media{
+    padding-top: 40px;
+    margin-right: 0;
+}
+
+.link-to-social-media{
+    padding-left: 30px;
+}
+
+.link-to-social-media img{
+    transition: transform .3s;
+}
+
+.link-to-social-media img:hover{
+    transform: scale(1.2);
+}
+
+.footer-title{
+    font-size: 29px;
+    font-weight: 700;
+}
+
+.footer-subtitle{
+    font-weight: 600;
+}
